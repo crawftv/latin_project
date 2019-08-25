@@ -12,6 +12,9 @@ numpy = "*"
 scikit-learn = "*"
 black = "*"
 blackcellmagic = "*"
+bs4 = "*"
+requests = "*"
+nest-asyncio = "*"
 
 [requires]
 python_version = "3.6"
