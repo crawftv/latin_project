@@ -106,3 +106,4 @@ classics/
 *.tar.gz
 *.tar
 
+*.pkl
