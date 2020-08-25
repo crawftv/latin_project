@@ -7,12 +7,15 @@ class Mood(Enum):
     IMPERATIVE = 2
     SUBJUNCTIVE = 3
     OPTATIVE = 4
+    ind = 1
+    subj = 3
 
 
 class Voice(Enum):
     ACTIVE = 1
     MIDDLE = 2
     PASSIVE = 3
+    act = 1
 
 
 class Person(Enum):
@@ -20,11 +23,12 @@ class Person(Enum):
     SECOND = 2
     THIRD = 3
 
-
 class Number(Enum):
     SINGULAR = 1
     DUAL = 2
     PLURAL = 3
+    sg = 1
+    pl = 3
 
 
 class Tense(Enum):
@@ -35,6 +39,11 @@ class Tense(Enum):
     PERFECT = 5
     PLUPERFECT = 6
     FUTURE_PERFECT = 7
+    pres = 1
+    fut = 3
+    aor = 4
+    perf = 5
+    plup = 6
 
 
 class Case(Enum):
@@ -43,6 +52,11 @@ class Case(Enum):
     DATIVE = 3
     ACCUSATIVE = 4
     VOCATIVE = 5
+    nom = 1
+    gen = 2
+    dat = 3
+    acc = 4
+    voc = 5
 
 
 class Declension(Enum):
@@ -55,6 +69,19 @@ class Gender(Enum):
     MASCULINE = 1
     FEMININE = 2
     NEUTERED = 3
+    masc = 1
+    fem = 2
+    neut = 3
+
+
+class PartofSpeech(Enum):
+    pron = 1
+    verb = 2
+    noun = 3
+    partic = 4
+    conj = 5
+    part = 6
+    adj = 7
 
 
 class WordMixin:
@@ -70,6 +97,7 @@ class Noun(WordMixin):
         self.number = number
         self.gender = gender
         self.case = case
+
 
 class Pronoun(Noun):
     def __init__(self):
